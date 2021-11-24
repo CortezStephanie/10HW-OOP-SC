@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const Manager = require("./lib/Manager");
 const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 //const renderHtml = require('i')
 const employeeArr = [];
 
@@ -80,29 +81,18 @@ function generateHTML(employees) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Test</title>
 </head>
-<body>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h1 class="card-title">Employee Name</h1>
-          <h2 class="card-subtitle mb-2 text-muted">Employee Role</h2>
-          <input type="text" id="id">
-          <input type="text" id="Email">
-          <input type="text" id="GitHub">
-
-        </div>
-      </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-</body>
-</html>`
+<body>`
+    
     for (i = 0; i < employees.length; i++) {
         if (employees[i].getRole() == "Manager") {
             template += `<h1> Manager: ${employees[i].name} </h1>
             `
         }
     }
-    template += `</body>
-</html>`
+    template += `<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </body>
+    </html>`
 
     return template
 }
@@ -117,24 +107,22 @@ function init() {
                 employeeArr.push(newManager);
                 if (data.addMore) return init()
             }
-
-            console.log(employeeArr)
-            // then transfers over to Html 
-            const htmlPageContent = generateHTML(employeeArr);
-            writeToFile(htmlPageContent)
-        })
-        .then((data) => {
             if (data.employee == "Intern") {
-                const newIntern = new Intern(data.employeeName, data.id, data.email, data.officeNumber)
+                const newIntern = new Intern(data.employeeName, data.id, data.email, data.school)
                 employeeArr.push(newIntern);
+                if (data.addMore) return init()
+            }if (data.employee == "Engineer") {
+                const newEngineer = new Engineer(data.employeeName, data.id, data.email, data.github)
+                employeeArr.push(newEngineer);
                 if (data.addMore) return init()
             }
 
-            console.log(employeeArr)
+            
             // then transfers over to Html 
             const htmlPageContent = generateHTML(employeeArr);
             writeToFile(htmlPageContent)
         });
 }
+
 // Function call to initialize 
 init();
