@@ -42,7 +42,7 @@ describe("Engineer", () => {
     describe("getGithub", () => {
         it("should return github username of the Engineer instance that was created", () => {
             const engineer6 = new Engineer("robert", 444, "me@me.com", "robertdinero");
-            const result = engineer6.getGithub();
+            const result = engineer6.getGitHub();
             expect(result).toEqual("robertdinero");
         })
     })

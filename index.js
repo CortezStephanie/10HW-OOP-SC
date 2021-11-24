@@ -85,7 +85,39 @@ function generateHTML(employees) {
     
     for (i = 0; i < employees.length; i++) {
         if (employees[i].getRole() == "Manager") {
-            template += `<h1> Manager: ${employees[i].name} </h1>
+            template += `
+            <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h1 class="card-title"> Manager: ${employees[i].name} </h1>
+          <p>${employees[i].email}</p>
+          <p>${employees[i].officeNumber}</p>
+          <p>${employees[i].id}</p>
+        </div>
+      </div>
+            `
+        }
+        if (employees[i].getRole() == "Engineer") {
+            template += `
+            <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h1 class="card-title"> Engineer: ${employees[i].name} </h1>
+          <p>${employees[i].email}</p>
+          <p>${employees[i].gitHub}</p>
+          <p>${employees[i].id}</p>
+        </div>
+      </div>
+            `
+        }
+        if (employees[i].getRole() == "Intern") {
+            template += `
+            <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h1 class="card-title">Intern: ${employees[i].name} </h1>
+          <p>${employees[i].email}</p>
+          <p>${employees[i].school}</p>
+          <p>${employees[i].id}</p>
+        </div>
+      </div>
             `
         }
     }
