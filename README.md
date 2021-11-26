@@ -10,10 +10,10 @@
 - [Contributors](#contributors)
 - [License](#license)
 ### Installation
-To install run the command `npm i` then run `node index.js
+To install run the command `npm i` then run `node index.js`
 ### Usage
 After filling out all options for your employee, a card will be displayed for each employee added.
-![!](/assets/images/employeecards.pdf "Employee Cards")
+![!](/assets/images/employees.png "Employee Cards")
 ## License
 This repository is covered by the MIT License  <br> 
 https://opensource.org/licenses/MIT
