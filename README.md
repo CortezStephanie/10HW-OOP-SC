@@ -10,18 +10,19 @@
 - [Contributors](#contributors)
 - [License](#license)
 ### Installation
-install npm i then run node index.js
+To install run the command `npm i` then run `node index.js
 ### Usage
-select from options then add custom employee information
+After filling out all options for your employee, a card will be displayed for each employee added.
+![!](/assets/images/employeecards.pdf "Employee Cards")
 ## License
 This repository is covered by the MIT License  <br> 
 https://opensource.org/licenses/MIT
 #### Contributors
 Damien Luzzo, Ethan Cho
 #### Test Instructions
-none
+To test run command `npm run test`. The testing being used for this application is jest!
 ##### Questions
 If you have any questions please feel free to contact me at cortezstephanie222@yahoo.com <br>
 GitHub: CortezStephanie 
 ##### Links
-please [click here](https://watch.screencastify.com/v/JuyzA6ionM2YkNmVmitH) to watch video of demostration.
+please [click here](https://watch.screencastify.com/v/Zu120ozgIJGMye6JHHFQ) to watch video of demostration.

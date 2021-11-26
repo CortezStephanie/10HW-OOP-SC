@@ -90,7 +90,7 @@ function generateHTML(employees) {
         <div class="card-body">
         <h1 class="card-title"> Manager: ${employees[i].name} </h1>
           <p>${employees[i].email}</p>
-          <p>${employees[i].officeNumber}</p>
+          <p>${employees[i].OfficeNumber}</p>
           <p>${employees[i].id}</p>
         </div>
       </div>
