@@ -3,6 +3,9 @@
 
 #  Employee Generator
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+Demonstration: [https://watch.screencastify.com/v/Zu120ozgIJGMye6JHHFQ](https://watch.screencastify.com/v/Zu120ozgIJGMye6JHHFQ)
+
 ##  You are able to create new employees with their roles and id numbers. 
 ### Table of contents
 - [Installation](#installation)
@@ -22,7 +25,4 @@ Damien Luzzo, Ethan Cho
 #### Test Instructions
 To test run command `npm run test`. The testing being used for this application is jest!
 ##### Questions
-If you have any questions please feel free to contact me at cortezstephanie222@yahoo.com <br>
-GitHub: CortezStephanie 
-##### Links
-please [click here](https://watch.screencastify.com/v/Zu120ozgIJGMye6JHHFQ) to watch video of demostration.
+If you have any questions please feel free to contact me through GitHub: [CortezStephanie](https://github.com/CortezStephanie)
